@@ -1,13 +1,7 @@
-import 'package:toolbox/core/provider_base.dart';
+import 'package:flutter/material.dart';
 
-class AppProvider extends BusyProvider {
-  int? _newestBuild;
-  int? get newestBuild => _newestBuild;
+final class AppProvider {
+  const AppProvider._();
 
-  bool moveBg = true;
-
-  void setNewestBuild(int build) {
-    _newestBuild = build;
-    notifyListeners();
-  }
+  static BuildContext? ctx;
 }
